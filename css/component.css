@@ -123,6 +123,18 @@
     color:#ffffff;
 }
 
+.imagewithpopupbox{
+  position: relative;
+}
+.imagewithpopupbox .popup{
+  position: absolute;
+  bottom:0;
+}
+.imagewithpopupbox .popup{
+  position: absolute;
+  bottom:0;
+}
+
 .commonbox{
   display: block;
 }
