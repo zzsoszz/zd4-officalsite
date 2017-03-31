@@ -129,55 +129,61 @@
 		      self.dots = target.find(".dot");
 		      self.dots.on("mouseenter",function(event)
 		      {
+		      	 self.showIndex(self.dots.get().indexOf(event.target));
+		      });
+
+		      target.on("mouseenter",function(event)
+		      {
 		      	 if(options.autoRun){
 		     	  self.stopAutoRun();
 		     	 }
-		      	 self.showIndex(self.dots.get().indexOf(event.target));
 		      }).on("mouseleave",function(){
 		      	 if(options.autoRun){
 		      		self.startAutoRun();
 		      	  }
 		      });
+		      
 		      //self.showIndex(0);
 		      if(options.autoRun){
-				self.startAutoRun();
-		      }
-			  target.on('touchstart', function (ev) {
-				    startX = ev.originalEvent.touches[0].pageX;
-				    startY = ev.originalEvent.touches[0].pageY;   
+				  target.on('touchstart', function (ev) {
+					    startX = ev.originalEvent.touches[0].pageX;
+					    startY = ev.originalEvent.touches[0].pageY;   
 
-				    if(options.autoRun){
-				   	 self.stopAutoRun();
-					}
-			  });
-			  target.on('touchend', function (ev) {
-				    var endX, endY;
-				    endX = ev.originalEvent.changedTouches[0].pageX;
-				    endY = ev.originalEvent.changedTouches[0].pageY;
-				    var direction = GetSlideDirection(startX, startY, endX, endY);
-				    switch (direction) {
-				        case 0:
-				            //alert("没滑动");
-				            break;
-				        case 1:
-				            //alert("向上");
-				            break;
-				        case 2:
-				            //alert("向下");
-				            break;
-				        case 3:
-				        	self.next();
-				            break;
-				        case 4:
-				        	self.prev();
-				            //alert("向右");
-				            break;
-				        default:            
-				    }
-				    if(options.autoRun){
-				    	self.startAutoRun(); 
-					}
-			  });
+					    if(options.autoRun){
+					   	 self.stopAutoRun();
+						}
+				  });
+				  target.on('touchend', function (ev) {
+					    var endX, endY;
+					    endX = ev.originalEvent.changedTouches[0].pageX;
+					    endY = ev.originalEvent.changedTouches[0].pageY;
+					    var direction = GetSlideDirection(startX, startY, endX, endY);
+					    switch (direction) {
+					        case 0:
+					            //alert("没滑动");
+					            break;
+					        case 1:
+					            //alert("向上");
+					            break;
+					        case 2:
+					            //alert("向下");
+					            break;
+					        case 3:
+					        	self.next();
+					            break;
+					        case 4:
+					        	self.prev();
+					            //alert("向右");
+					            break;
+					        default:            
+					    }
+					    if(options.autoRun){
+					    	self.startAutoRun(); 
+						}
+				  });
+				  self.startAutoRun();
+		      }
+			  
 
 		    }
 		}
