@@ -123,10 +123,34 @@
     color:#ffffff;
 }
 
+.commonbox{
+  display: block;
+}
+.commonbox:before,
+.commonbox:after{
+  display: table;
+  content: " ";
+}
+.commonbox:after {
+  clear: both;
+}
+.commonbox .item{
+  float:left;
+  width:25%;
+}
+
+.floatpureimagecontainer{
+  display:block;
+  overflow:hidden;
+}
+.floatpureimagecontainer .item{
+ float: left;
+ text-align: center;
+ padding:10px;
+}
 
 
 .timelinebox{
-  background:#000;
   overflow:hidden;
   padding:300px 0;
 }
