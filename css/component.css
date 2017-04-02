@@ -226,7 +226,7 @@
 }
 #timelinebox1.qslidemultiply .qslideviewbox .item{
     position: absolute;
-    width: 600px;
+    width: 400px;
     max-height:height: 605px;
     height: fit-content;
     padding:0px;
