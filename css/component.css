@@ -1,8 +1,7 @@
-.qcarrousel {
+/*.qcarrousel {
     width:100%;
     position: relative;
     background: #ffffff;
-/*    height:1000px;*/
     margin-bottom:10px;
 }
 .qcarrousel .itembox{
@@ -16,7 +15,6 @@
 }
 .qcarrousel .itembox .item > img {
     width: 100%;
-/*    height:1000px;*/
 }
 .qcarrousel .itembox .item.active {
     display: block;
@@ -41,7 +39,7 @@
 }
 .qcarrousel .dotsbox .dotslist .dot.active {
     border-top:2px solid #fff;
-}
+}*/
 
 
 
