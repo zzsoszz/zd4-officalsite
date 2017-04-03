@@ -67,8 +67,8 @@
 		}*/
 	</style>
 </head>
-<body style="background:#fff">
-	<div class="nav">
+<body style="background:#ffffff">
+	<div class="nav" id="nav">
 		<a class="brand" href="#">
 		</a>
 		<div class="menu">
@@ -132,7 +132,7 @@
 	    </div>
 	</div>
 	<div style="padding:80px;">
-		<div style="width:60%;margin:auto;position: relative;">
+		<div style="margin:auto;position: relative;">
 			<img src="images/bg4.png" style="width:100%" alt="">
 <!-- 			<div style="position:absolute;left:0;bottom:0;top:33%;padding:50;width:33.3%">
 				专注10年商学教育，历经30000+学员见证<br/>
@@ -151,6 +151,14 @@
 						<div class="teacherbox" style="">
 							<img src="images/teacheravatar2.png" style="max-width:100%;max-width:100%;" >
 							<div class="popup" >
+								<div style="font-size:120%;font-weight:700;line-height:2em;;">张三</div>
+								<div style="font-size:90%">旗云科技有限公司有限公司有限公司</div>
+								<div class="exinfo">					
+									<div style="font-size:120%;font-weight:700;line-height:2em;">擅长领域</div>
+									<div style="font-size:90%">婚姻与心理健康</div>
+									<div style="font-size:90%">青春期健康</div>
+									<div style="font-size:90%">亲自关系</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -210,8 +218,8 @@
 
 
 
-	<div  style="background:#414141;padding-bottom:50px;">
-		<h1 style="color:#fff;text-align: center;line-height:3em;">分院就近报名</h1>
+	<div  style="background:#414141;padding-bottom:50px;padding-top: 50px;">
+		<h1 style="color:#fff;text-align: center;">分院就近报名</h1>
 		<div style="width:80%;margin:auto;">
 			<div class="pureimagecontainer" style="padding: 50px;">
 				<div class="wrapitem">
@@ -354,7 +362,10 @@
 
 <link rel="stylesheet" href="js/plugin/qslidemultiply/1.0.0/plugin.css">
 <script src="js/plugin/qslidemultiply/1.0.0/plugin.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGIN STYLES -->
+
+<script src="js/scrollmagic/ScrollMagic.js"></script>
+<script src="js/scrollmagic/plugins/debug.addIndicators.js"></script>
+
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script>
@@ -365,6 +376,23 @@ jQuery(document).ready(function() {
 		speed:0.5,
 		infinite:false
 	});
+
+	var controller=new ScrollMagic.Controller();
+	var pinIntroScene=new ScrollMagic.Scene({
+		triggerElement:"#nav",
+		duration:0,
+		triggerHook:0
+	})
+	// .addIndicators({
+	// 	name:"nav scene",
+	// 	colorTrigger:"red",
+	// 	indent:200,
+	// 	colorStart:'pink'
+	// })
+	.setPin("#nav",{pushFollowers:false})
+	.addTo(controller)
+	;
+
 });
 </script>
 <!-- END PAGE LEVEL SCRIPTS -->

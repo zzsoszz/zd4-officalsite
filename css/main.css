@@ -117,3 +117,34 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
+
+.teacherbox {
+  position: relative;
+  height:100%;
+  line-height:1.6em;
+}
+.teacherbox img{
+  height:100%;
+  width:100%;
+}
+.teacherbox .popup{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:100px;
+  background:rgba(0,0,0,0.5);
+  padding:5% 10%;
+  color:#ffffff;
+  transition: all 1s;
+  -webkit-transition: all 1s; 
+}
+.teacherbox:hover .popup{
+  height:100%;
+}
+.teacherbox .exinfo{
+  display: none;
+}
+.teacherbox:hover .exinfo{
+  display: block;
+}
