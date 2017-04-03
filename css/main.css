@@ -148,3 +148,22 @@ body{
 .teacherbox:hover .exinfo{
   display: block;
 }
+
+.index .qcarrousel  .dotsbox .dot{
+  width:100px;
+  height:5px;
+  border:none;
+  border-radius:0;
+}
+.index .qcarrousel .dotslist .dot::before { 
+    content: ''; 
+    position: absolute; 
+    top: -20px; 
+    right: -0px; 
+    bottom: -20px; 
+    left: -0px; 
+}
+.index .qcarrousel .dotslist .dot:hover::before { 
+    border-radius:0;
+    background:rgba(0,0,0,0);
+}
